@@ -27,8 +27,7 @@ RUN cp /u01/app/oracle/product/11.2.0/xe/network/admin/listener.ora /u01/app/ora
 ENV ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe \
     ORACLE_SID=XE
 
-
 EXPOSE 1521
 EXPOSE 8080
 
-CMD /oracle/startup.sh
+CMD /oracle/startup.sh && /sbin/my_init
